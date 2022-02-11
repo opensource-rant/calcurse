@@ -324,6 +324,7 @@ static inline void key_generic_reload(void)
 	if (ret == IO_RELOAD_LOAD ||
 	    ret == IO_RELOAD_CTINUE ||
 	    ret == IO_RELOAD_MERGE) {
+    config_load();
 		ui_todo_load_items();
 		ui_todo_sel_reset();
 		do_storage(0);
